@@ -32,7 +32,7 @@ module.exports = {
         const id = req.query.id
         res.json({
           errno: 0,
-          data: Object.assign({}, seller, {id})
+          data: Object.assign({}, seller, { id })
         })
       })
       app.get('/api/goods', function (req, res) {
@@ -58,5 +58,6 @@ module.exports = {
     config.plugin('context')
       .use(webpack.ContextReplacementPlugin,
         [/moment[/\\]locale$/, /zh-cn/])
-  }
+  },
+  publicPath: ''
 }
